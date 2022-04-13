@@ -7,26 +7,25 @@ var paragraph="Однажды я шёл перед вечером мимо ба�
 
 function sent(str){
 
-    var i=-1;
     var sentences=[];
     var t=0;
-    for(;;) {
 
-        var k=str.indexOf(".",i+1);
-        var h=str.slice(i+1,k);
-        h=h.split(" ");
-        h=h.concat(".");
-        var p=h.indexOf(".");
-        var sentence = {lenght: p, words: h};
+var k=str.split(".");
 
-        sentences[t]=sentence;
-        t++;
-        i=k+1;
+for(t;t<k.length-1;t++) {
 
-        if ((k+2)==str.length)
-            break;
 
+    var h = k[t].split(" ");
+    if (t>0) {
+        h.shift();
     }
+    var p=h.length;
+    h = h.concat(".");
+
+    var sentence = {lenght: p, words: h};
+
+    sentences[t] = sentence;
+}
     return sentences;
 }
 
