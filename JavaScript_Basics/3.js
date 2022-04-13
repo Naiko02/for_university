@@ -5,17 +5,17 @@ var tournament={NumberOfMember: 200,
     PrisePool:1000000,
 
     ChangeMoney:function (money){
-    tournament.PrisePool=money;},
+        this.PrisePool=money;},
 
     Output:function() {
-    l(tournament.NumberOfMember);
-    l(tournament.PrisePool);
-    l(tournament.TypeOfSport);
-    l(tournament.Stage);
-    l("В нашем турнире существуют такие категории " + tournament.Weight)},
+    l(this.NumberOfMember);
+    l(this.PrisePool);
+    l(this.TypeOfSport);
+    l(this.Stage);
+    l("В нашем турнире существуют такие категории " + this.Weight)},
 
     set number(num){
-    tournament.NumberOfMember=num;
+        this.NumberOfMember=num;
     }
 };
 
